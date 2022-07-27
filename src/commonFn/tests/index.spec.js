@@ -1,4 +1,4 @@
-import { add, updateFormDataByKey, getSequence } from "../index.js";
+import { add, updateFormDataByKey, getSequence, gcd } from "../index.js";
 
 it("test", () => {
   expect(add(1, 2)).toBe(3);
@@ -32,4 +32,9 @@ describe("最长递增序列", () => {
     0, 8, 4, 12, 2, 10, 6, 14, 1, 9, 5, 13, 3, 11, 7, 15,
   ]);
   expect(result2).toEqual([0, 4, 6, 9, 13, 15]);
+});
+describe("最大公约数", () => {
+ expect(gcd(10, 5)).toBe(5);
+ expect(gcd(2000, 475)).toBe(25);
+ expect(gcd(2000, 1)).toBe(1);
 });

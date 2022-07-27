@@ -86,3 +86,19 @@ export const getSequence = (arr) => {
   }
   return result;
 };
+
+/**
+ * 最大公约数
+ * @param {*} a 
+ * @param {*} b 
+ * @returns 
+ */
+export const gcd = (a, b) => {
+  let remainder = a % b;
+  while (remainder !== 0) {
+      a = b;
+      b = remainder;
+      remainder = a % b;
+  }
+  return b;
+};

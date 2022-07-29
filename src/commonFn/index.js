@@ -39,7 +39,7 @@ export const updateFormDataByKey = (formData, key, value) => {
 
 /**
  * 最长递增序列
- * @param {*} arr 
+ * @param {*} arr
  * @returns 最长递增序列下标index
  */
 export const getSequence = (arr) => {
@@ -89,16 +89,16 @@ export const getSequence = (arr) => {
 
 /**
  * 最大公约数
- * @param {*} a 
- * @param {*} b 
- * @returns 
+ * @param {*} a
+ * @param {*} b
+ * @returns
  */
 export const gcd = (a, b) => {
   let remainder = a % b;
   while (remainder !== 0) {
-      a = b;
-      b = remainder;
-      remainder = a % b;
+    a = b;
+    b = remainder;
+    remainder = a % b;
   }
   return b;
 };

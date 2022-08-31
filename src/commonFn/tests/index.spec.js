@@ -1,4 +1,10 @@
-import { add, updateFormDataByKey, getSequence, gcd } from "../index.js";
+import {
+  add,
+  updateFormDataByKey,
+  getSequence,
+  gcd,
+  typeOf,
+} from "../index.js";
 
 it("test", () => {
   expect(add(1, 2)).toBe(3);
@@ -34,7 +40,17 @@ describe("最长递增序列", () => {
   expect(result2).toEqual([0, 4, 6, 9, 13, 15]);
 });
 describe("最大公约数", () => {
- expect(gcd(10, 5)).toBe(5);
- expect(gcd(2000, 475)).toBe(25);
- expect(gcd(2000, 1)).toBe(1);
+  expect(gcd(10, 5)).toBe(5);
+  expect(gcd(2000, 475)).toBe(25);
+  expect(gcd(2000, 1)).toBe(1);
+});
+
+describe("判断类型", () => {
+  expect(typeOf(10)).toBe('number');
+  expect(typeOf('10')).toBe('string');
+  expect(typeOf({obj: 10})).toBe('object');
+  expect(typeOf([])).toBe('array');
+  expect(typeOf(true)).toBe('boolean');
+  expect(typeOf(() => {})).toBe('function');
+  expect(typeOf(null)).toBe('null');
 });

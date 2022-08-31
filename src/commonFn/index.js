@@ -102,3 +102,11 @@ export const gcd = (a, b) => {
   }
   return b;
 };
+/**
+ * 判断类型
+ * @param {*} obj 
+ * @returns 
+ */
+export const typeOf = function(obj) {
+  return Object.prototype.toString.call(obj).slice(8, -1).toLowerCase();
+}
